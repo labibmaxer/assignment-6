@@ -6,7 +6,7 @@ function App() {
 
   return (
     <div> 
-      <h2 className='text-red-300'>hekki react </h2>
+     <Nav></Nav>
     </div>
   )
 }
