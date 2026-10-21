@@ -1,6 +1,8 @@
 import React from 'react';
 
-const Tools = () => {
+const Product = ({productpromise}) => {
+    console.log(productpromise);
+    
     return (
         <div className='container mx-auto  py-24 text-center justify-center'>
             <h1 className='font-extrabold text-[#101727] text-[48px]'>Premium Digital Tools</h1>
@@ -14,4 +16,4 @@ const Tools = () => {
     );
 };
 
-export default Tools;
+export default Product;
