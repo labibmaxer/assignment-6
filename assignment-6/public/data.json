@@ -1,0 +1,98 @@
+[
+{
+"id": "1",
+"name": "Design Studio Pro",
+"description": "Advanced AI-powered design assistant for high-converting landing pages and UI/UX assets.",
+"price": 29,
+"period": "monthly",
+"tag": "Best Seller",
+"tagType": "best-seller",
+"features": [
+"100+ UI templates",
+"Auto layout generator",
+"Figma integration",
+"Export to React/Tailwind"
+],
+"icon": "/assets/products/design-tool.png"
+},
+{
+"id": "2",
+"name": "Operation Automator",
+"description": "Streamline business workflows and automate repetitive data entry tasks effortlessly.",
+"price": 49,
+"period": "monthly",
+"tag": "Popular",
+"tagType": "popular",
+"features": [
+"Unlimited workflows",
+"Zapier integration",
+"Real-time analytics",
+"24/7 priority support"
+],
+"icon": "/assets/products/operation.png"
+},
+{
+"id": "3",
+"name": "Portfolio Builder Elite",
+"description": "Create stunning developer and designer portfolios with lightning-fast performance.",
+"price": 79,
+"period": "yearly",
+"tag": "New",
+"tagType": "new",
+"features": [
+"Custom domain support",
+"Markdown blog engine",
+"SEO optimization",
+"Dark/Light mode switch"
+],
+"icon": "/assets/products/portfolio.png"
+},
+{
+"id": "4",
+"name": "CartFlow E-Commerce Suite",
+"description": "A modular shopping cart and checkout optimization kit designed for maximum sales conversion.",
+"price": 99,
+"period": "one-time",
+"tag": "Best Seller",
+"tagType": "best-seller",
+"features": [
+"One-click checkout",
+"Stripe & PayPal ready",
+"Abandoned cart recovery",
+"Mobile optimized UI"
+],
+"icon": "/assets/products/shopping-cart.png"
+},
+{
+"id": "5",
+"name": "Social Media Matrix",
+"description": "Manage, schedule, and analyze content across multiple social platforms from a single dashboard.",
+"price": 19,
+"period": "monthly",
+"tag": "Popular",
+"tagType": "popular",
+"features": [
+"Multi-platform scheduler",
+"AI caption generator",
+"Engagement analytics",
+"Team collaboration tools"
+],
+"icon": "/assets/products/social-media.png"
+},
+{
+"id": "6",
+"name": "Content Craft Engine",
+"description": "AI-driven copywriting and documentation engine optimized for tech writers and founders.",
+"price": 39,
+"period": "monthly",
+"tag": "New",
+"tagType": "new",
+"features": [
+"SEO keyword targeting",
+"Blog post generator",
+"Tone customizer",
+"Plagiarism checker"
+],
+"icon": "/assets/products/writing_2327400 1.png"
+}
+]
