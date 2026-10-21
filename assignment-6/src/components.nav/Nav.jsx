@@ -1,8 +1,9 @@
 import React from 'react';
 import logo from "../assets/products/DigiTools.png"
+import { IoCartOutline } from "react-icons/io5";
 const Nav = () => {
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto max-h-[2px]'>
            <div className="max-lg:collapse bg-base-200 lg:mb-48 shadow-sm   rounded-md">
   <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
   <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>
@@ -14,38 +15,24 @@ const Nav = () => {
      <img src={logo} alt="DigiTools" />
     </div>
     <div className="navbar-center hidden lg:flex">
-      <ul className="menu menu-horizontal px-1">
-        <li><button>Item 1</button></li>
-        <li>
-          <details>
-            <summary>Parent</summary>
-            <ul className="p-2 bg-base-100 w-40 z-1">
-              <li><button>Submenu 1</button></li>
-              <li><button>Submenu 2</button></li>
-            </ul>
-          </details>
-        </li>
-        <li><button>Item 3</button></li>
+      <ul className="menu menu-horizontal px-1 font-semibold text-[16px]">
+        <li><button>Products</button></li>
+       
+        <li><button>Features</button></li>
+         <li><button>Pricing</button></li>
+          <li><button>Testimonials</button></li>
+           <li><button>FAQ</button></li>
+            {/* <li><button>Item 3</button></li> */}
       </ul>
     </div>
-    <div className="navbar-end">
-      <input type="text" placeholder="Search" className="input w-64 lg:w-auto" />
+    <div className="navbar-end gap-4">
+      {/* <input type="text" placeholder="Search" className="input w-64 lg:w-auto" /> */}
+      <button className="font-semibold text-[16px] flex items-center"><IoCartOutline />Login</button> 
+      <button className="btn btn-active text-white bg-linear-to-r from-[#4F39F6] to-[#9514FA] rounded-4xl ">Get Started</button>
     </div>
   </div>
 
-  <div className="collapse-content lg:hidden z-1">
-    <ul className="menu">
-      <li><button>Item 1</button></li>
-      <li>
-        <button>Parent</button>
-        <ul>
-          <li><button>Submenu 1</button></li>
-          <li><button>Submenu 2</button></li>
-        </ul>
-      </li>
-      <li><button>Item 3</button></li>
-    </ul>
-  </div>
+
 </div>
         </div>
     );
