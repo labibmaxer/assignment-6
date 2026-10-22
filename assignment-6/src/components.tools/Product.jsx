@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
-
+import React, { use, useState } from 'react';
+import CardProducts from '../component.card/CardProducts';
+import CardCart from './component.Cardcart/CardCart';
 const Product = ({productpromise}) => {
     console.log(productpromise);
+    const products = use(productpromise);
+    const [selectProducts , setselectedProducts] = useState([]);
+    console.log(selectProducts , setselectedProducts);
+    
+    console.log(products);
+    
 const [selectedType , setselectedType] = useState('product') ;
-console.log(selectedType);
+console.log(selectedType , setselectedType);
 
     return (
         <div className='container mx-auto  py-24 text-center justify-center'>
@@ -18,6 +25,7 @@ console.log(selectedType);
                         } `}>Cart </button> 
                   
           </div>
+          {selectedType === 'product' ? (<CardProducts products={products} />) : (<CardCart />)}
         </div>
     );
 };

@@ -1,15 +1,15 @@
    import './index.css'
 import './App.css'
 import Nav from './components.nav/Nav'
-import Tools from './components.tools/Product'
+// import Tools from './components.tools/Product'
 import Hero from './components.hero/Hero'
 import Footer from './component.footer/Footer'
 import Steps from './components.steps/Steps'
 import Product from './components.tools/Product'
 import { Suspense } from 'react'
- const fetchProduct = async () => {
-  const res = await fetch("/assignment-6/public/data.json");
-  return res.json () 
+const fetchProduct = async () => {
+  const res = await fetch("/data.json");
+  return res.json();
 };
 const productpromise = fetchProduct();
 function App() {
