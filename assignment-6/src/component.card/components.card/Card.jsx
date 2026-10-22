@@ -9,7 +9,8 @@ const { name, description, price, period, tag, features, icon } = product;
 
 
   return (
-    <div className="relative max-w-sm rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
+    <div className=''>
+    <div className="relative max-w-sm grid rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
       
       <div className="flex items-start justify-between mb-5">
         <div className="flex h-16 w-16 items-center justify-center rounded-full bg-slate-50 border border-slate-100 p-3">
@@ -35,20 +36,27 @@ const { name, description, price, period, tag, features, icon } = product;
         <span className="text-sm font-medium text-slate-500">{period}</span>
       </div>
 
-      <ul className="mt-6 space-y-2.5">
-        <li className="flex items-center text-sm text-slate-600">
+<ul className="mt-6 space-y-2.5">
+            {features.map((singlefeature , index) => (
+
+<li key={index} className="flex items-center text-sm text-slate-600">
           <svg className="mr-2.5 h-4 w-4 flex-shrink-0 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2.5">
             <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
           </svg>
-          <span>{features}</span>
+          <span>{singlefeature}</span>
         </li>
+
+
+        ))}
+      
        
       </ul>
 
-      <button className="mt-6 w-full rounded-full bg-purple-600 hover:bg-purple-700 py-3 text-center text-sm font-semibold text-white transition-colors">
+      <button className="mt-6 w-full rounded-full bg-purple-600 hover:bg-purple-700 py-3 text-center text-sm font-semibold text-white transition-colors" >
         Buy Now
       </button>
 
+    </div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ const CardProducts = ({products , selectProducts , setselectedProducts}) => {
     console.log(products);
     
     return (
-        <div>
+        <div className='grid grid-cols-3 mt-10 gap-y-6'>
             {products.map((product,index) => (
 
             <Card key={index} product={product } selectProducts={selectProducts} setselectedProducts={setselectedProducts}></Card>
