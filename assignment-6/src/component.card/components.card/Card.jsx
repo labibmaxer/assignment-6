@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Card = ({product , selectProducts , setselectedProducts }) => {
 
@@ -6,9 +6,11 @@ const Card = ({product , selectProducts , setselectedProducts }) => {
     return null;
 
 const { name, description, price, period, tag, features, icon } = product;
-
+//  const[isSelected , setSelected] = useState (false); 
+ const isSelected = selectProducts.some((p) => p.id === product.id)
+ console.log(product.id, selectProducts);
  const handleBuy = () => {
-  if(selectProducts.some((p) => p.id === product.id))
+  if(isSelected)
     return;
   setselectedProducts([...selectProducts, product])
  }
@@ -56,9 +58,13 @@ const { name, description, price, period, tag, features, icon } = product;
        
       </ul>
 
-      <button onClick={ handleBuy } className="mt-6 w-full rounded-full bg-purple-600 hover:bg-purple-700 py-3 text-center text-sm font-semibold text-white transition-colors" >
-        Buy Now
-      </button>
+   <button
+  onClick={handleBuy}
+  disabled={isSelected}
+  className="mt-6 w-full rounded-full bg-purple-600 hover:bg-purple-700 py-3 text-center text-sm font-semibold text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-purple-600"
+>
+  {isSelected ? 'In Cart' : 'Buy Now'}
+</button>
 
     </div>
     </div>
