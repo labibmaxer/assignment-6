@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Card from '../Card';
+import CardProducts from '../../CardProducts';
 const CardTwo = ({product , selectProducts = [] , setselectedProducts }) => {
 const total = selectProducts.reduce((sum, item) => sum + Number(item.price || 0), 0)
    if (!product) 
@@ -12,6 +13,8 @@ const { name, description, price, period, tag, features, icon } = product;
             setselectedProducts(selectProducts.filter((item) => item.id !== id));
         }
     }
+    console.log(setselectedProducts, 'setselectedProducts');
+    
   return (
     <div className=''>
            
@@ -24,7 +27,6 @@ const { name, description, price, period, tag, features, icon } = product;
               key={item.id}
               className="flex items-center justify-between bg-slate-50 p-4 rounded-2xl"
             >
-              {/* Left Side: Icon, Title & Price */}
               <div className="flex items-center gap-4">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white p-2 shadow-sm">
                   <img
@@ -43,9 +45,8 @@ const { name, description, price, period, tag, features, icon } = product;
                 </div>
               </div>
 
-              {/* Right Side: Remove Button */}
               <button
-                onClick={() => handleRemove(item.id)}
+                onClick={() => handleDelete(item.id)}
                 className="text-xs font-semibold text-pink-500 hover:text-pink-600 transition-colors"
               >
                 Remove
@@ -55,7 +56,6 @@ const { name, description, price, period, tag, features, icon } = product;
         )}
       </div>
 
-      {/* Total Section */}
       <div className="flex items-center justify-between mt-8 pt-4 border-t border-slate-100">
         <span className="text-sm font-medium text-slate-400">Total:</span>
         <span className="text-2xl font-bold text-slate-900">${total}</span>

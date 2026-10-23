@@ -52,7 +52,7 @@ const { name, description, price, period, tag, features, icon } = product;
        
       </ul>
 
-      <button className="mt-6 w-full rounded-full bg-purple-600 hover:bg-purple-700 py-3 text-center text-sm font-semibold text-white transition-colors" >
+      <button onClick={() => } className="mt-6 w-full rounded-full bg-purple-600 hover:bg-purple-700 py-3 text-center text-sm font-semibold text-white transition-colors" >
         Buy Now
       </button>
 
