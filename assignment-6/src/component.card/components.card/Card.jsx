@@ -7,7 +7,11 @@ const Card = ({product , selectProducts , setselectedProducts }) => {
 
 const { name, description, price, period, tag, features, icon } = product;
 
-
+ const handleBuy = () => {
+  if(selectProducts.some((p) => p.id === product.id))
+    return;
+  setselectedProducts([...selectProducts, product])
+ }
   return (
     <div className=''>
     <div className="relative max-w-sm grid rounded-3xl border border-gray-100 bg-white p-6 shadow-sm">
@@ -52,7 +56,7 @@ const { name, description, price, period, tag, features, icon } = product;
        
       </ul>
 
-      <button onClick={() => } className="mt-6 w-full rounded-full bg-purple-600 hover:bg-purple-700 py-3 text-center text-sm font-semibold text-white transition-colors" >
+      <button onClick={ handleBuy } className="mt-6 w-full rounded-full bg-purple-600 hover:bg-purple-700 py-3 text-center text-sm font-semibold text-white transition-colors" >
         Buy Now
       </button>
 

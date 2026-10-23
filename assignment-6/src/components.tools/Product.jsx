@@ -25,7 +25,10 @@ console.log(selectedType , setselectedType);
                         } `}>Cart </button> 
                   
           </div>
-          {selectedType === 'product' ? (<CardProducts products={products} />) : (<CardCart />)}
+          {selectedType === 'product' ? (<CardProducts products={products} selectProducts={selectProducts} setselectedProducts={setselectedProducts}/>
+        ) : (
+        <CardCart products={products} selectProducts={selectProducts} setselectedProducts={setselectedProducts}/>
+        )}
         </div>
     );
 };

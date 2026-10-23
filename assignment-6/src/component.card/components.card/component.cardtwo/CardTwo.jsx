@@ -1,17 +1,17 @@
 import React from 'react';
 import Card from '../Card';
 import CardProducts from '../../CardProducts';
-const CardTwo = ({product , selectProducts = [] , setselectedProducts }) => {
+const CardTwo = ({ selectProducts = [] , setselectedProducts }) => {
 const total = selectProducts.reduce((sum, item) => sum + Number(item.price || 0), 0)
-   if (!product) 
-    return null;
+  //  if (!product) 
+    // return null;
 
-const { name, description, price, period, tag, features, icon } = product;
+// const { name, description, price, period, tag, features, icon } = product;
 
- const handleDelete = () => {
-        if(setselectedProducts) {
+ const handleDelete = (id) => {
+        
             setselectedProducts(selectProducts.filter((item) => item.id !== id));
-        }
+        
     }
     console.log(setselectedProducts, 'setselectedProducts');
     
@@ -20,7 +20,7 @@ const { name, description, price, period, tag, features, icon } = product;
            
       <div className="space-y-4">
         {selectProducts.length === 0 ? (
-          <p className="text-center text-slate-400 py-8">Your cart is empty.</p>
+          <p className="text-center text-slate-400 py-8 text-3xl">Your cart is empty.</p>
         ) : (
           selectProducts.map((item) => (
             <div
@@ -60,7 +60,7 @@ const { name, description, price, period, tag, features, icon } = product;
         <span className="text-sm font-medium text-slate-400">Total:</span>
         <span className="text-2xl font-bold text-slate-900">${total}</span>
       </div>
-        
+           <button className=" btn text-white bg-linear-to-r! from-[#4F39F6] to-[#9514FA] rounded-4xl p-5 text-20 w-full mt-10">Proceed To Checkout</button>
 
 
     </div>
